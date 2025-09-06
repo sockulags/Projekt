@@ -12,7 +12,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install",
     "release": "pnpm build && changeset publish",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.6",
@@ -34,6 +35,17 @@
     "typedoc": "^0.28.12",
     "typescript": "^5.4.0",
     "vitest": "^1.5.0",
-    "zod": "^3.23.0"
+    "zod": "^3.23.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   }
 }
