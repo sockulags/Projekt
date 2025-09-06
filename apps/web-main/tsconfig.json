@@ -1,0 +1,38 @@
+{
+  "extends": "../../packages/tsconfig/next-app.json",
+  "compilerOptions": {
+    "paths": {
+      "@ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "@utils/*": [
+        "../../packages/utils/src/*"
+      ],
+      "@config": [
+        "../../packages/config/src/index.ts"
+      ],
+      "@types": [
+        "../../packages/types/src/index.d.ts"
+      ]
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../packages/ui/src",
+    "../../packages/utils/src",
+    "../../packages/config/src",
+    "../../packages/types/src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

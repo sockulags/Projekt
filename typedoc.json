@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["packages/ui/src/index.ts"],
+  "out": "docs/ui",
+  "tsconfig": "tsconfig.base.json",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "excludeExternals": true
+}

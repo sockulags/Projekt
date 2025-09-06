@@ -1,0 +1,7 @@
+{
+  "name": "@internal/tsconfig",
+  "private": true,
+  "version": "0.0.0",
+  "files": ["base.json", "lib.json", "next-app.json", "vitest.json"],
+  "license": "MIT"
+}
