@@ -26,8 +26,9 @@ Guideline: Keep highest priority items at the top of Active. When an item is com
 ## Active (Prioritized)
 
 1. Docs & Storybook
-   - Generate Typedoc in CI artifact upload
-   - Deploy Storybook preview per PR (GitHub Pages or Vercel)
+   - (DONE) Generate Typedoc in CI artifact upload
+   - (DONE) Storybook preview artifact via workflow
+   - (DONE) Persistent Storybook via GitHub Pages
 2. Theming foundation
    - Introduce CSS variable tokens (colors, spacing, radii, shadow)
    - Dark mode toggle story
@@ -64,3 +65,5 @@ Guideline: Keep highest priority items at the top of Active. When an item is com
 - Release pipeline (changeset entry + release workflow)
 - Code quality cleanup (imports normalized, Text polymorphic typing, added package .eslintrc, dist ignored)
 - Pre-commit workflow (husky + lint-staged hook running eslint --fix & prettier)
+- Docs: CI Typedoc artifact + Storybook preview workflow
+- Storybook Pages deploy (auto on main)

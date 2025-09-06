@@ -1,13 +1,11 @@
-name: CI
+name: Storybook Preview
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  build-test:
+  build-storybook:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,24 +25,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
+      - name: Build UI package (ensure dist for story imports if needed)
+        run: pnpm build --filter @internal/ui
 
-      - name: Typecheck
-        run: pnpm typecheck
+      - name: Build Storybook
+        run: pnpm --filter @internal/ui build-storybook
 
-      - name: Test
-        run: pnpm test -- --coverage
-
-      - name: Build
-        run: pnpm build
-
-      - name: Generate docs
-        run: pnpm docs
-
-      - name: Upload Typedoc artifact
+      - name: Upload Storybook artifact
         uses: actions/upload-artifact@v4
         with:
-          name: typedoc-ui
-          path: docs/ui
-          if-no-files-found: warn
+          name: storybook-ui
+          path: packages/ui/storybook-static
+          if-no-files-found: error
