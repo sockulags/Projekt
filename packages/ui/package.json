@@ -5,43 +5,40 @@
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist", "src/global.css"],
+  "sideEffects": ["src/global.css"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./global.css": "./src/global.css",
+    "./package.json": "./package.json"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.2.0",
-    "@storybook/addon-interactions": "^8.2.0",
-    "@storybook/react": "^8.2.0",
-    "@storybook/react-vite": "^8.2.0",
-    "@testing-library/jest-dom": "^6.4.0",
-    "@testing-library/react": "^15.0.0",
     "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.0",
-    "autoprefixer": "^10.4.0",
-    "jsdom": "^26.1.0",
-    "postcss": "^8.4.0",
-    "storybook": "^8.2.0",
-    "tailwindcss": "^3.4.0"
+  "@types/react-dom": "18.2.0",
+  "@storybook/react": "^8.2.0",
+  "@storybook/react-vite": "^8.2.0",
+  "@storybook/addon-essentials": "^8.2.0",
+  "@storybook/addon-interactions": "^8.2.0",
+  "storybook": "^8.2.0",
+  "tailwindcss": "^3.4.0",
+  "postcss": "^8.4.0",
+  "autoprefixer": "^10.4.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --dts --format cjs,esm",
-    "dev": "tsup src/index.ts --watch --dts --format cjs,esm",
+  "build": "tsup src/index.ts --dts --format cjs,esm",
+  "dev": "tsup src/index.ts --watch --dts --format cjs,esm",
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "sideEffects": ["src/global.css","global.css","dist/styles.js","dist/styles.mjs"]
+  }
 }
