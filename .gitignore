@@ -10,7 +10,6 @@ coverage
 
 # Turbo / pnpm
 .turbo
-pnpm-lock.yaml
 
 # Env
 .env*
