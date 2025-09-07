@@ -12,7 +12,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install",
     "release": "pnpm build && changeset publish",
-    "docs": "typedoc",
+    "generate-docs": "npx typedoc",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -21,8 +21,8 @@
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/react": "^15.0.0",
     "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
     "@vitest/coverage-v8": "^1.5.0",
     "eslint": "^8.56.0",
     "eslint-import-resolver-typescript": "^3.6.1",

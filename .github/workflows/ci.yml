@@ -40,7 +40,7 @@ jobs:
         run: pnpm build
 
       - name: Generate docs
-        run: pnpm docs
+        run: pnpm generate-docs
 
       - name: Upload Typedoc artifact
         uses: actions/upload-artifact@v4
