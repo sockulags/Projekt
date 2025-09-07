@@ -1,12 +1,17 @@
 {
   "name": "@internal/ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist", "src/global.css"],
-  "sideEffects": ["src/global.css"],
+  "files": [
+    "dist",
+    "src/global.css"
+  ],
+  "sideEffects": [
+    "src/global.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -22,19 +27,19 @@
   },
   "devDependencies": {
     "@types/react": "18.2.0",
-  "@types/react-dom": "18.2.0",
-  "@storybook/react": "^8.2.0",
-  "@storybook/react-vite": "^8.2.0",
-  "@storybook/addon-essentials": "^8.2.0",
-  "@storybook/addon-interactions": "^8.2.0",
-  "storybook": "^8.2.0",
-  "tailwindcss": "^3.4.0",
-  "postcss": "^8.4.0",
-  "autoprefixer": "^10.4.0"
+    "@types/react-dom": "18.2.0",
+    "@storybook/react": "^8.2.0",
+    "@storybook/react-vite": "^8.2.0",
+    "@storybook/addon-essentials": "^8.2.0",
+    "@storybook/addon-interactions": "^8.2.0",
+    "storybook": "^8.2.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
   },
   "scripts": {
-  "build": "tsup src/index.ts --dts --format cjs,esm",
-  "dev": "tsup src/index.ts --watch --dts --format cjs,esm",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "dev": "tsup src/index.ts --watch --dts --format cjs,esm",
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
