@@ -7,9 +7,13 @@ dist
 .next
 out
 coverage
+docs/ui
 
 # Turbo / pnpm
 .turbo
+
+# ESLint
+.eslintcache
 
 # Env
 .env*
