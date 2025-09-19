@@ -8,6 +8,7 @@ dist
 out
 coverage
 docs/ui
+storybook-static
 
 # Turbo / pnpm
 .turbo
